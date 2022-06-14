@@ -1,0 +1,78 @@
+@import 'Scss/_index.scss';
+.ProfileCard {
+  background-color: $cardColor;
+  border-radius: 1.5rem;
+  @include flex();
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow-x: clip;
+
+  @include e('Images') {
+    @include flex(center, center);
+    flex-direction: column;
+    position: relative;
+
+    & > img:nth-of-type(1) {
+      width: 100%;
+    }
+    & > img:nth-of-type(2) {
+      width: 6rem;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -3rem;
+      box-shadow: $profileShadow;
+    }
+  }
+  @include e('Name') {
+    @include flex(flex, center);
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 10px;
+
+    & > span:nth-of-type(1) {
+      font-weight: bold;
+    }
+  }
+  > span {
+    font-weight: bold;
+    color: $orange;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    align-self: center;
+  }
+}
+//follow Status
+.followStatus {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 0.75rem;
+
+  & > hr {
+    width: 85%;
+    @include border();
+  }
+  & > div {
+    @include flex(space-between, center);
+    gap: 1rem;
+    width: 80%;
+
+    > .vl {
+      height: 150%;
+      @include border(1px);
+    }
+  }
+
+  @include e('follows') {
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 0.4rem;
+    > span:nth-of-type(1) {
+      font-weight: bold;
+    }
+    > span:nth-of-type(2) {
+      color: $gray;
+      font-size: 13px;
+    }
+  }
+}
