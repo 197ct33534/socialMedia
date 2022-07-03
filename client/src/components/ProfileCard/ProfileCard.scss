@@ -2,7 +2,7 @@
 .ProfileCard {
   background-color: $cardColor;
   border-radius: 1.5rem;
-  @include flex();
+  display: flex;
   flex-direction: column;
   gap: 1rem;
   position: relative;
@@ -50,10 +50,10 @@
 
   & > hr {
     width: 85%;
-    @include border();
+    @include border(1px);
   }
   & > div {
-    @include flex(space-between, center);
+    @include flex(space-around, center);
     gap: 1rem;
     width: 80%;
 

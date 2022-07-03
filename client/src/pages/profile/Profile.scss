@@ -1,0 +1,11 @@
+.Profile {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18rem 1fr 20rem;
+  gap: 1rem;
+  &-center {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
