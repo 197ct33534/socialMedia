@@ -1,26 +1,28 @@
 {
-    "name": "server",
-    "version": "1.0.0",
-    "description": "server mern stack social media",
-    "main": "index.js",
-    "type": "module",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon index",
-        "start": "node index"
-    },
-    "keywords": [
-        "backend",
-        "server"
-    ],
-    "author": "nghia.197ct33534",
-    "license": "ISC",
-    "dependencies": {
-        "bcrypt": "^5.0.1",
-        "body-parser": "^1.20.0",
-        "dotenv": "^16.0.1",
-        "express": "^4.18.1",
-        "mongoose": "^6.3.8",
-        "nodemon": "^2.0.16"
-    }
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server mern stack social media",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index ",
+    "start": "node index"
+  },
+  "keywords": [
+    "backend",
+    "server"
+  ],
+  "author": "nghia.197ct33534",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.8",
+    "nodemon": "^2.0.16"
+  }
 }

@@ -16,6 +16,10 @@
     color: $orange;
     @include border(2px, $orange);
   }
+  &:disabled {
+    background: silver;
+    pointer-events: none;
+  }
 }
 ::-webkit-scrollbar {
   display: none;

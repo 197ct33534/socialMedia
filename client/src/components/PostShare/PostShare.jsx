@@ -12,8 +12,13 @@ const PostShare = () => {
   const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
       let img = e.target.files[0];
-      setImage({ img: URL.createObjectURL(img) });
+      setImage(img);
     }
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //post data
+    const newPost = {};
   };
   return (
     <div className="PostShare">
@@ -41,7 +46,9 @@ const PostShare = () => {
             <CalendarMonthOutlinedIcon />
             Schedule
           </div>
-          <button className="button PostShare__options--btn">Share</button>
+          <button onClick={handleSubmit} className="button PostShare__options--btn">
+            Share
+          </button>
           <div style={{ display: 'none' }}>
             <input type="file" name="myImage" ref={imageRef} onChange={handleImageChange} />
           </div>
@@ -53,7 +60,7 @@ const PostShare = () => {
                 setImage(null);
               }}
             />
-            <img src={image.img} alt="" />
+            <img src={URL.createObjectURL(image)} alt="" />
           </div>
         )}
       </div>
